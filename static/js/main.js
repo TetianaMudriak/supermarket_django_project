@@ -1,16 +1,16 @@
 /**
-  * Header Connect
-  * retinaLogo
-  * ajaxContactForm
-  * Loadmore Item
-  * headerFixed
-  * mobileNav
-  * ajaxSubscribe
-  * alertBox
-  * loadmore
-*/
+ * Header Connect
+ * retinaLogo
+ * ajaxContactForm
+ * Loadmore Item
+ * headerFixed
+ * mobileNav
+ * ajaxSubscribe
+ * alertBox
+ * loadmore
+ */
 
-; (function ($) {
+;(function ($) {
     "use strict";
 
     var themesflatTheme = {
@@ -54,15 +54,27 @@
     // Start things up
     themesflatTheme.init();
 
-    var retinaLogos = function() {
+    var retinaLogos = function () {
         var retina = window.devicePixelRatio > 1 ? true : false;
-          if(retina) {
-              $('#site-logo-inner').find('img').attr( {src:'assets/images/logo/logo@2x.png',width:'146',height:'65'} );
+        if (retina) {
+            $('#site-logo-inner').find('img').attr({
+                src: 'assets/images/logo/logo@2x.png',
+                width: '146',
+                height: '65'
+            });
 
-              $('#logo-footer.style').find('img').attr( {src:'assets/images/logo/logo-footer@2x.png',width:'146',height:'65'} );
-              $('#logo-footer.style2').find('img').attr( {src:'assets/images/logo/logo-footer-home.png',width:'146',height:'65'} );
-          }   
-        };
+            $('#logo-footer.style').find('img').attr({
+                src: 'assets/images/logo/logo-footer@2x.png',
+                width: '146',
+                height: '65'
+            });
+            $('#logo-footer.style2').find('img').attr({
+                src: 'assets/images/logo/logo-footer-home.png',
+                width: '146',
+                height: '65'
+            });
+        }
+    };
 
     var ajaxContactForm = function () {
         $('#contactform,#commentform').each(function () {
@@ -70,7 +82,7 @@
                 submitHandler: function (form) {
                     var $form = $(form),
                         str = $form.serialize(),
-                        loading = $('<div />', { 'class': 'loading' });
+                        loading = $('<div />', {'class': 'loading'});
 
                     $.ajax({
                         type: "POST",
@@ -81,13 +93,26 @@
                         },
                         success: function (msg) {
                             var result, cls;
-                            if (msg === 'Success') {
-                                result = 'Message Sent Successfully To Email Administrator. ( You can change the email management a very easy way to get the message of customers in the user manual )';
-                                cls = 'msg-success';
-                            } else {
-                                result = 'Error sending email.';
-                                cls = 'msg-error';
-                            }
+
+                            result = 'Message Sent Successfully To Email Administrator.';
+                            cls = 'msg-success';
+
+                            $form.prepend(
+                                $('<div />', {
+                                    'class': 'flat-alert ' + cls,
+                                    'text': result
+                                }).append(
+                                    $('<a class="close" href="#"><i class="fa fa-close"></i></a>')
+                                )
+                            );
+
+                            $form.find(':input').not('.submit').val('');
+                        },
+                        error: function (request, status, error) {
+                            var result, cls;
+
+                            result = 'Error sending email. Please, reload the page and try again.';
+                            cls = 'msg-error';
 
                             $form.prepend(
                                 $('<div />', {
@@ -118,34 +143,34 @@
         $(".fl-item.fl-item4").slice(0, 15).show();
         $(".fl-item.fl-item5").slice(0, 7).show();
 
-        $(".loadmore").on("click", function(e){
-          e.preventDefault();
+        $(".loadmore").on("click", function (e) {
+            e.preventDefault();
 
-          $(".fl-item:hidden").slice(0, 4).slideDown();
-          $(".fl-item2:hidden").slice(0, 3).slideDown();
-          $(".fl-item3:hidden").slice(0, 3).slideDown();
-          $(".fl-item4:hidden").slice(0, 5).slideDown();
-          $(".fl-item5:hidden").slice(0, 13).slideDown();
-          if($(".fl-item:hidden").length == 0) {
-            $(".loadmore").hide();
-          }
-          if($(".fl-item2:hidden").length == 0) {
-            $("#loadmore").hide();
-          }
-          if($(".fl-item3:hidden").length == 0) {
-            $("#loadmore").hide();
-          }
-          if($(".fl-item4:hidden").length == 0) {
-            $("#loadmore").hide();
-          }
-          if($(".fl-item5:hidden").length == 0) {
-            $("#loadmore").hide();
-          }
+            $(".fl-item:hidden").slice(0, 4).slideDown();
+            $(".fl-item2:hidden").slice(0, 3).slideDown();
+            $(".fl-item3:hidden").slice(0, 3).slideDown();
+            $(".fl-item4:hidden").slice(0, 5).slideDown();
+            $(".fl-item5:hidden").slice(0, 13).slideDown();
+            if ($(".fl-item:hidden").length == 0) {
+                $(".loadmore").hide();
+            }
+            if ($(".fl-item2:hidden").length == 0) {
+                $("#loadmore").hide();
+            }
+            if ($(".fl-item3:hidden").length == 0) {
+                $("#loadmore").hide();
+            }
+            if ($(".fl-item4:hidden").length == 0) {
+                $("#loadmore").hide();
+            }
+            if ($(".fl-item5:hidden").length == 0) {
+                $("#loadmore").hide();
+            }
         });
     };
 
-       // Header Fixed
-       var headerFixed = function () {
+    // Header Fixed
+    var headerFixed = function () {
         if ($('body').hasClass('header-fixed')) {
             var nav = $('#header_main');
 
@@ -182,55 +207,56 @@
         var wrapMenu = $("#site-header-inner .wrap-box");
         var navExtw = $(".nav-extend.active");
         var navExt = $(".nav-extend.active").children();
-    
+
         responsivemenu(mobile);
-    
+
         mobile.addListener(responsivemenu);
-    
+
         function responsivemenu(mobile) {
-          if (mobile.matches) {
-            $("#main-nav")
-              .attr("id", "main-nav-mobi")
-              .appendTo("#header_main")
-              .hide()
-              .children(".menu")
-              .append(navExt)
-              .find("li:has(ul)")
-              .children("ul")
-              .removeAttr("style")
-              .hide()
-              .before('<span class="arrow"></span>');
-          } else {
-            $("#main-nav-mobi")
-              .attr("id", "main-nav")
-              .removeAttr("style")
-              .prependTo(wrapMenu)
-              .find(".ext")
-              .appendTo(navExtw)
-              .parent()
-              .siblings("#main-nav")
-              .find(".sub-menu")
-              .removeAttr("style")
-              .prev()
-              .remove();
-    
-            $(".mobile-button").removeClass("active");
-            $(".mobile-button-style2").removeClass("active");
-            $(".sub-menu").css({ display: "block" });
-          }
+            if (mobile.matches) {
+                $("#main-nav")
+                    .attr("id", "main-nav-mobi")
+                    .appendTo("#header_main")
+                    .hide()
+                    .children(".menu")
+                    .append(navExt)
+                    .find("li:has(ul)")
+                    .children("ul")
+                    .removeAttr("style")
+                    .hide()
+                    .before('<span class="arrow"></span>');
+            } else {
+                $("#main-nav-mobi")
+                    .attr("id", "main-nav")
+                    .removeAttr("style")
+                    .prependTo(wrapMenu)
+                    .find(".ext")
+                    .appendTo(navExtw)
+                    .parent()
+                    .siblings("#main-nav")
+                    .find(".sub-menu")
+                    .removeAttr("style")
+                    .prev()
+                    .remove();
+
+                $(".mobile-button").removeClass("active");
+                $(".mobile-button-style2").removeClass("active");
+                $(".sub-menu").css({display: "block"});
+            }
         }
+
         $(document).on("click", ".mobile-button", function () {
-          $(this).toggleClass("active");
-          $("#main-nav-mobi").slideToggle();
+            $(this).toggleClass("active");
+            $("#main-nav-mobi").slideToggle();
         });
         $(document).on("click", ".mobile-button-style2", function () {
-          $(this).toggleClass("active");
-          $("#main-nav-mobi").slideToggle();
+            $(this).toggleClass("active");
+            $("#main-nav-mobi").slideToggle();
         });
         $(document).on("click", "#main-nav-mobi .arrow", function () {
-          $(this).toggleClass("active").next().slideToggle();
+            $(this).toggleClass("active").next().slideToggle();
         });
-      };
+    };
     var ajaxSubscribe = {
         obj: {
             subscribeEmail: $('#subscribe-email'),
@@ -322,7 +348,7 @@
 
     // Dom Ready
     $(function () {
-        $( window ).on('load resize',function() {
+        $(window).on('load resize', function () {
             retinaLogos();
         });
         headerFixed();

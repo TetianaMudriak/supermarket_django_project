@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+    <script src="https://kit.fontawesome.com/5f0faacc5e.js"
+            crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>Vikan - Organic Food Store HTML Template</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="{% static 'dist/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'dist/app.css' %}">
+    <link rel="stylesheet" href="{% static 'dist/responsive.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'images/logo/Favicon.png' %}">
+    <link rel="apple-touch-icon-precomposed"
+          href="{% static 'images/logo/Favicon.png' %}">
+</head>
+<body class="body header-fixed">
+
+<div class="preload preload-container">
+    <div id="loaders">
+        <div id="shadow"></div>
+        <div id="box"></div>
+    </div>
+</div>
+
+<div id="wrapper">
+    <div id="page" class="clearfix">
+        <div id="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="inner flex-one">
+                            <div class="top-bar-left top-box flex-three">
+                                <h6 class="title-map flex-three"><i
+                                        class="fal fa-map-marker-alt"></i>
+                                    Location: <span class="titles fw-4"> 120 F 2th Yt, Melbone NY 1259</span>
+                                </h6>
+                                <h6 class="title-email link-style-2"><i
+                                        class="fas fa-envelope"></i> Email:<a
+                                        href="info:com@exam.com"
+                                        class="titles fw-4"> <span
+                                        class="__cf_email__"
+                                        data-cfemail="a3c0cccee3c6dbc2ce8dc0ccce">[email&#160;protected]</span>
+                                </a></h6>
+                            </div>
+                            <div class="top-bar-right top-box flex-three">
+                                <h6 class="title-map flex-three link-style-2">
+                                    <i class="fal fa-phone-alt"></i>
+                                    Hotline Number: <a href="tel:0123456789"
+                                                       class="fw-4 titles">
+                                    210-9856988</a></h6>
+                                <div class="follow flex">
+                                    <h6 class="title-icon"> Follow Us: </h6>
+                                    <div class="icon-top link-style-2">
+                                        <a href="#"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-instagram"></i></a>
+                                        <a href="#"> <i
+                                                class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'header.html' %}
+
+        {% block main %} {% endblock main %}
+
+        {% include 'footer.html' %}
+        <div class="widget-social-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <h5 class="title-bottom fw-4"> Copyright © 2022 <a
+                                href="https://themeforest.net/user/themesflat/portfolio"
+                                class="text-color-3">Themesflat</a>. All Rights
+                            Reserved. </h5>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="icon-bottom text-color-1">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="img-svg">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" result="blur"
+                                stdDeviation="10"></feGaussianBlur>
+                <feColorMatrix in="blur"
+                               values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                               result="goo"></feColorMatrix>
+                <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+            </filter>
+        </defs>
+    </svg>
+</div>
+
+
+<script data-cfasync="false"
+        src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.js' %}"></script>
+<script src="{% static 'js/countto.js' %}"></script>
+<script src="{% static 'js/count-down.js' %}"></script>
+<script src="{% static 'js/countday.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'js/swiper.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'js/jquery-validate.js' %}"></script>
+<script src="{% static 'js/plugin.js' %}"></script>
+<script src="{% static 'js/shortcodes.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

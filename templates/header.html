@@ -1,0 +1,135 @@
+{% load static %}
+<header id="header_main" class="header_1 js-header">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="site-header-inner">
+                    <div class="wrap-box relative">
+                        <div id="site-logo" class="clearfix">
+                            <div id="site-logo-inner">
+                                <a href="{% url 'index' %}" rel="home"
+                                   class="main-logo">
+                                    <img id="logo_header"
+                                         src="{% static 'images/logo/logo.png' %}"
+                                         alt="img" width="169" height="42">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mobile-button"><span></span></div>
+                        <nav id="main-nav" class="main-nav">
+                            <ul id="menu-primary-menu" class="menu">
+                                <li class="menu-item current-menu-item">
+                                    <a href="{% url 'index' %}">Home</a>
+                                </li>
+
+                                <li class="menu-item menu-item-has-children">
+                                    <a> Categories </a>
+                                    <ul class="sub-menu ">
+                                        <li class="menu-item"></li>
+                                        {% for category in categories %}
+
+                                        <li class="menu-item"><a href="{% url 'catalogue' category.slug %}">{{ category.name }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{% url 'catalogue' 'vegetables' %}">Shop </a>
+<!--                                    <ul class="sub-menu ">-->
+<!--                                        <li class="menu-item"><a-->
+<!--                                                href="">Shop-->
+<!--                                            Grid</a></li>-->
+<!--                                        <li class="menu-item"><a-->
+<!--                                                href="shop-left-sidebar.html">Shop-->
+<!--                                            Left Sidebar</a></li>-->
+<!--                                        <li class="menu-item"><a-->
+<!--                                                href="shop-list-sidebar.html">Shop-->
+<!--                                            List Sidebar</a></li>-->
+<!--                                        <li class="menu-item"><a-->
+<!--                                                href="shop-right-sidebar.html">Shop-->
+<!--                                            Right Sidebar</a></li>-->
+<!--                                        <li class="menu-item"><a-->
+<!--                                                href="">Product-->
+<!--                                            Details</a></li>-->
+<!--                                    </ul>-->
+                                </li>
+<!--                                <li class="menu-item menu-item-has-children ">-->
+<!--                                    <a href="#">Blogs</a>-->
+<!--                                    <ul class="sub-menu">-->
+<!--                                        <li class="menu-item "><a-->
+<!--                                                href="blog.html">Blog</a></li>-->
+<!--                                        <li class="menu-item"><a-->
+<!--                                                href="blog-category.html">Blog-->
+<!--                                            Category</a></li>-->
+<!--                                        <li class="menu-item"><a-->
+<!--                                                href="blog-details.html">Blog-->
+<!--                                            Details</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+                                <li class="menu-item">
+                                    <a href="{% url 'contact' %}">Contact </a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                        <div class="flat-button-top flex">
+                            <div class="header-search flat-show-search flex"
+                                 id="s1">
+                                <a href="#"
+                                   class="show-search header-search-trigger">
+                                    <span class="icon-Vector"><i
+                                            class="far fa-search"></i></span>
+                                </a>
+                                <div class="cart-box">
+                                    <a href="#" class="cart"><i
+                                            class="fas fa-shopping-basket"></i>
+                                    </a>
+                                    <a href="#"
+                                       class="cart-contents"><span>2</span> </a>
+                                </div>
+                                <a href="#" class=""><i class="fas fa-user"></i></a>
+                                <div class="top-search">
+                                    <form action="{% url 'search' %}" method="get" role="search"
+                                          class="search-form">
+                                        <input type="search" id="s"
+                                               class="search-field"
+                                               placeholder="Search..." value=""
+                                               name="s" title="Search for"
+                                               required="">
+<!--                                        <div class="select-custom">-->
+<!--                                            <select id="cat", name="cat">-->
+<!--                                                {% for category in category_tabs %}-->
+<!--                                                <option value="{{ category.name }}">{{ category.name }}</option>-->
+<!--                                                {% endfor %}-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+                                        <button class="search search-submit"
+                                                type="submit" title="Search">
+                                            <i class="far fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="sc-btn-top" id="site-header">
+                                <div class="buttons">
+                                    <a class="blob-btn btn-style"
+                                       href="{% url 'contact' %}">
+                                        Get A Quote
+                                        <span class="blob-btn__inner">
+<span class="blob-btn__blobs">
+<span class="blob-btn__blob"></span>
+<span class="blob-btn__blob"></span>
+<span class="blob-btn__blob"></span>
+<span class="blob-btn__blob"></span>
+</span>
+</span>
+                                    </a>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,696 +1,160 @@
+{% extends 'base.html' %}
+{% block main %}
+{% load percent %}
 {% load static %}
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head>
-<meta charset="utf-8">
-<title>Vikan - Organic Food Store HTML Template</title>
-<meta name="author" content="themesflat.com">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" href="{% static 'dist/font-awesome.css' %}">
-<link rel="stylesheet" href="{% static 'dist/app.css' %}">
-<link rel="stylesheet" href="{% static 'dist/responsive.css' %}">
 
-<link rel="shortcut icon" href="{% static 'images/logo/Favicon.png' %}">
-<link rel="apple-touch-icon-precomposed" href="{% static 'images/logo/Favicon.png' %}">
-</head>
-<body class="body header-fixed">
-
-<div class="preload preload-container">
-<div id="loaders">
-<div id="shadow"></div>
-<div id="box"></div>
-</div>
-</div>
-
-<div id="wrapper">
-<div id="page" class="clearfix">
-<div id="top-bar">
-<div class="container">
-<div class="row">
-<div class="col-lg-12 col-md-12">
-<div class="inner flex-one">
-<div class="top-bar-left top-box flex-three">
-<h6 class="title-map flex-three"><i class="fal fa-map-marker-alt"></i> Location: <span class="titles fw-4"> 120 F 2th Yt, Melbone NY 1259</span> </h6>
-<h6 class="title-email link-style-2"><i class="fas fa-envelope"></i> Email:<a href="info:com@exam.com" class="titles fw-4"> <span class="__cf_email__" data-cfemail="a7c4c8cae7c2dfc6ca89c4c8ca">[email&#160;protected]</span> </a> </h6>
-</div>
-<div class="top-bar-right top-box flex-three">
-<h6 class="title-map flex-three link-style-2">
-<i class="fal fa-phone-alt"></i>
-Hotline Number: <a href="tel:0123456789" class="fw-4 titles"> 210-9856988</a> </h6>
-<div class="follow flex">
-<h6 class="title-icon"> Follow Us: </h6>
-<div class="icon-top link-style-2">
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-twitter"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"> <i class="fab fa-pinterest-p"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<header id="header_main" class="header_1 js-header">
-<div class="container ">
-<div class="row">
-<div class="col-md-12">
-<div id="site-header-inner">
-<div class="wrap-box relative">
-<div id="site-logo" class="clearfix">
-<div id="site-logo-inner">
-<a href="index.html" rel="home" class="main-logo">
-<img id="logo_header" src="{% static 'images/logo/logo.png' %}" alt="img" width="169" height="42">
-</a>
-</div>
-</div>
-<div class="mobile-button"><span></span></div>
-<nav id="main-nav" class="main-nav">
-<ul id="menu-primary-menu" class="menu">
-<li class="menu-item menu-item-has-children">
-<a href="index.html">Home</a>
-<ul class="sub-menu">
-<li class="menu-item"><a href="index.html">Home 01</a></li>
-<li class="menu-item"><a href="home2.html">Home 02</a></li>
-<li class="menu-item"><a href="home3.html">Home 03</a></li>
-</ul>
-</li>
-
-<li class="menu-item">
-<a href="about.html"> About Us </a>
-</li>
-<li class="menu-item menu-item-has-children">
-<a href="#"> Pages </a>
-<ul class="sub-menu ">
-<li class="menu-item"><a href="services.html">Services</a></li>
-<li class="menu-item"><a href="service-details.html">Service Details</a></li>
-<li class="menu-item"><a href="projects.html">Projects</a></li>
-<li class="menu-item"><a href="project-details.html">Projects Details</a></li>
-<li class="menu-item"><a href="team.html">Our Team</a></li>
-<li class="menu-item"><a href="faq.html">Our Faq</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-has-children current-menu-item">
-<a href="#">Shop </a>
-<ul class="sub-menu ">
-<li class="menu-item"><a href="shop-grid.html">Shop Grid</a></li>
-<li class="menu-item"><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-<li class="menu-item"><a href="shop-list-sidebar.html">Shop List Sidebar</a></li>
-<li class="menu-item"><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-<li class="menu-item current-item"><a href="product-details.html">Product Details</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-has-children ">
-<a href="#">Blogs</a>
-<ul class="sub-menu">
-<li class="menu-item "><a href="blog.html">Blog</a></li>
-<li class="menu-item"><a href="blog-category.html">Blog Category</a></li>
-<li class="menu-item"><a href="blog-details.html">Blog Details</a></li>
-</ul>
- </li>
-<li class="menu-item">
-<a href="contact.html">Contact </a>
-</li>
-</ul>
-</nav>
-<div class="flat-button-top flex">
-<div class="header-search flat-show-search flex" id="s1">
-<a href="#" class="show-search header-search-trigger">
-<span class="icon-Vector"><i class="far fa-search"></i></span>
-</a>
-<div class="cart-box">
-<a href="#" class="cart"><i class="fas fa-shopping-basket"></i> </a>
-<a href="#" class="cart-contents"><span>2</span> </a>
-</div>
-<a href="#" class=""><i class="fas fa-user"></i></a>
-<div class="top-search">
-<form action="#" method="get" role="search" class="search-form">
-<input type="search" id="s" class="search-field" placeholder="Search..." value="" name="s" title="Search for" required="">
-<button class="search search-submit" type="submit" title="Search">
-<i class="far fa-search"></i>
-</button>
-</form>
-</div>
-</div>
-<div class="sc-btn-top" id="site-header">
-<div class="buttons">
-<a class="blob-btn" href="contact.html">
-Get A Quote
-<span class="blob-btn__inner">
-<span class="blob-btn__blobs">
-<span class="blob-btn__blob"></span>
-<span class="blob-btn__blob"></span>
-<span class="blob-btn__blob"></span>
-<span class="blob-btn__blob"></span>
-</span>
-</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</header>
-
-<section class="flat-title-page inner"><div class="overlay"></div>
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<div class="page-title-heading center">
-<h2 class="heading">Product Details</h2>
-<div class="title-inner link-style-3">
-<h5 class=""><a class="home fw-4" href="index.html">Home</a><span>Product Details</span></h5>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section class="flat-title-page inner">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-title-heading center">
+                    <h2 class="heading">Product Details</h2>
+                    <div class="title-inner link-style-3">
+                        <h5 class=""><a class="home fw-4"
+                                        href="index.html">Home</a><span>Product Details</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="tf-section flat-shop-details">
-<div class="container">
-<div class="row">
-<div class="col-lg-7 col-md-12 col-sm-12">
-<div class="image-cart">
-<div class="flat-tabs card-media media">
-<ul class="menu-tab menu-img">
-<li class="item-title">
-<img src="{% static 'images/img-box/shop-cart-2.png' %}" alt="">
-</li>
-<li class="item-title">
-<img src="{% static 'images/img-box/shop-cart-3.png' %}" alt="">
-</li>
-<li class="item-title">
-<img src="{% static 'images/img-box/shop-cart-4.png' %}" alt="">
-</li>
-</ul>
-<div class="content-tab content-img">
-<div class="content-inner tab-content">
-<img src="{% static 'images/img-box/shop-cart-1.png' %}" alt="">
-</div>
-<div class="content-inner tab-content">
-<img src="{% static 'images/img-box/shop-cart-1.png' %}" alt="">
-</div>
-<div class="content-inner tab-content">
-<img src="{% static 'images/img-box/shop-cart-1.png' %}" alt="">
-</div>
-</div>
-<a href="#" class="mark-search"><i class="fas fa-search"></i></a>
-</div>
-</div>
-</div>
-<div class="col-lg-5 col-md-12 col-sm-12">
-<div class="wrap-cart">
-<div class="money">
-<span class="one fw-6"><del>$79.00</del> </span> <span class="two fw-6">$50.00</span>
-</div>
-<div class="titles title-36 fw-6">Organic Vegetable</div>
-<div class="box-star flex">
-<div class="star">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-</div>
-<h6 class="text-color-4">( 1 Customer Review )</h6>
-<div class="stock"><a href="#">IN STOCK</a></div>
-</div>
-<p class="text-1">Nemo enim ipsam voluptatem quia voluptas consequuntur on magni dolores ratione voluptatem sequi nesciunt. Neque porro quisquam est, </p>
-<div class="wrap-list flex">
-<div class="box-quantity">
-<div class="quantity flex">
-<div class="input-text"><input type="text" name="name" value="1" class="quantity-number"></div>
-<a class="btn-quantity plus-btn"><i class="far fa-plus"></i></a>
-<a class="btn-quantity minus-btn"><i class="far fa-minus"></i></a>
-</div>
- </div>
-<div class="tf-buttons"><a href="#">Add To Cart</a></div>
-</div>
-<div class="tf-buttons style"><a href="#">Buy It Now</a></div>
-<div class="icon-box flex">
-<div class="icon icon-1 link-style-1"><a href="#"><i class="far fa-heart"></i>Add to wishlist</a></div>
-<div class="icon icon-2 link-style-1"><a href="#"><i class="fas fa-compress-arrows-alt"></i>Compare</a></div>
-</div>
-<div class="title-box flex-three"><h5 class="fw-6">Category :</h5><h6 class="fw-4 text-color-4">Green Vegetables</h6></div>
-<div class="title-box style flex-three"><h5 class="fw-6">Tags :</h5><h6 class="fw-4 text-color-4">Organic</h6></div>
-<div class="icon-social text-color-1 flex">
-<a href="#" class="style-1"><i class="fab fa-facebook-f"></i></a>
-<a href="#" class="style-2"><i class="fab fa-twitter"></i></a>
-<a href="#" class="style-3"><i class="fab fa-pinterest-p"></i></a>
-<a href="#" class="style-4"><i class="fab fa-linkedin-in"></i></a>
-</div>
-</div>
-</div>
-<div class="col-lg-12 col-md-12 col-sm-12">
-<div class="post">
-<div class="title-one title-36 fw-6">Description</div>
-<p class="text-2">Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, at sodales leo maximus bulum vulputate, lorem orci convallis quam, sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo vel.</p>
-<div class="wrap-one flex">
-<div class="box-1">
-<p class="text-3">Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, the sodales leo maximus bulum vulputate, </p>
-<ul class="check-one">
-<li><p>Expound the actual teachings of the great explorer of the truth,</p></li>
-<li><p>The master-builder of human happiness.</p></li>
-<li><p>Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p></li>
-<li><p>Expound the actual teachings of the great explorer of the truth,</p></li>
-<li><p>Expound the actual teachings of the great explorer of the truth,</p></li>
-<li><p>Expound the actual teachings of the great explorer of the truth,</p></li>
-</ul>
-</div>
-<div class="box-2 flex-one">
-<div class="inner-1">
-<img src="{% static 'images/img-box/shop-details-1.jpg' %}" alt="">
-<div class="content center">
-<h4 class="fw-6">100% Organic Food</h4>
-</div>
-</div>
- <div class="inner-2">
-<img src="{% static 'images/img-box/shop-details-2.jpg' %}" alt="">
-<div class="content center">
-<h4 class="fw-6">100% Natural</h4>
-</div>
-</div>
-</div>
-</div>
-<div class="image"> <img src="{% static 'images/img-box/shop-details-3.jpg' %}" alt=""></div>
-<div id="comment" class="comment">
-<div class="title-comment title-36 fw-6">1 Reviews</div>
-<ol class="comment-list">
-<li class="comment-01">
-<div class="comment-avatar flex-two">
-<div class="images">
-<img src="{% static 'images/img-box/shop-author.jpg' %}" alt="images">
-</div>
-<div class="content">
-<div class="author-box flex-one">
-<div class="author">
-<h3 class=""> Marko Loiuce </h3>
-<h6 class="font-2 fw-4 text-color-6">July 1, 2022 . 4pm</h6>
-</div>
-<div class="star">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-</div>
-</div>
-<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by humour, orandomised words which don't look even slightly believable.</p>
-</div>
-</div>
-</li>
-</ol>
-<div id="respond" class="respond-comment">
-<div class="title-comment title-36 fw-6">Add a review </div>
-<div class="title-star flex">
-<h3>Rate this Product?</h3>
-<div class="star">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-</div>
-</div>
-<form method="post" id="contactform" class="comment-form form-submit" action="./contact/contact-process.php" accept-charset="utf-8" novalidate="novalidate">
-<fieldset class="message-wrap">
-<p>Your review *</p>
-<textarea id="comment-message" name="message" rows="6" tabindex="5" placeholder="" aria-required="true"></textarea>
-</fieldset>
-<fieldset class="name-wrap">
-<p>Name *</p>
-<input type="text" id="name" class="tb-my-input style-1" name="name" tabindex="1" placeholder="" value="" size="32" aria-required="true" required="">
-</fieldset>
-<fieldset class="email-wrap">
-<p>Email *</p>
-<input type="email" id="email" class="tb-my-input style-2" name="email" tabindex="2" placeholder="" value="" size="32" aria-required="true" required="">
-</fieldset>
-<div class="buttons">
-<button name="submit" type="submit" id="comment-reply" class="blob-btn btn-style">
-Submit a Preview
-<span class="blob-btn__inner">
-<span class="blob-btn__blobs">
-<span class="blob-btn__blob"></span>
-<span class="blob-btn__blob"></span>
-<span class="blob-btn__blob"></span>
-<span class="blob-btn__blob"></span>
-</span>
-</span>
-</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 col-sm-12">
+                <div class="image-cart">
+                    <div class="flat-tabs card-media media">
+                        <ul class="menu-tab menu-img">
+                            {% for image in product.images.all %}
+                            <li class="item-title">
+                                <img src="{{ image.image.url }}"
+                                     alt="">
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <div class="content-tab content-img">
+                            {% for image in product.images.all %}
+                            <div class="content-inner tab-content">
+                                <img src="{{ image.image.url }}"
+                                     alt="">
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <a href="#" class="mark-search"><i
+                                class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12">
+                <div class="wrap-cart">
+                    <div class="money">
+                        <span class="one fw-6"><del>UAH {{ product.old_price }}</del> </span>
+                        <span class="two fw-6">UAH {{ product.price }}</span>
+                    </div>
+                    <div class="titles title-36 fw-6">{{ product.title }}</div>
+                    <div class="box-star flex">
+                        <div class="stock"><a href="#">{% if product.availability %} IN STOCK {% else %} OUT OF STOCK {% endif %}</a></div>
+                    </div>
+                    <p class="text-1">{{ product.short_description|safe }}</p>
+                    <div class="wrap-list flex">
+                        <div class="box-quantity">
+                            <div class="quantity flex">
+                                <div class="input-text"><input type="text"
+                                                               name="name"
+                                                               value="1"
+                                                               class="quantity-number">
+                                </div>
+                                <a class="btn-quantity plus-btn"><i
+                                        class="far fa-plus"></i></a>
+                                <a class="btn-quantity minus-btn"><i
+                                        class="far fa-minus"></i></a>
+                            </div>
+                        </div>
+                        <div class="tf-buttons"><a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                    <div class="tf-buttons style"><a href="#">Buy It Now</a>
+                    </div>
+                    <div class="icon-box flex">
+                        <div class="icon icon-1 link-style-1"><a href="#"><i
+                                class="far fa-heart"></i>Add to wishlist</a>
+                        </div>
+                        <div class="icon icon-2 link-style-1"><a href="#"><i
+                                class="fas fa-compress-arrows-alt"></i>Compare</a>
+                        </div>
+                    </div>
+                    <div class="title-box flex-three"><h5 class="fw-6">Category
+                        :</h5><a href="{% url 'catalogue' product.categories.all.0.slug %}" class="fw-4 text-color-4">{{ product.categories.all.0 }}</a></div>
+
+                    <div class="icon-social text-color-1 flex">
+                        <a href="#" class="style-1"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="style-2"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="style-3"><i
+                                class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="style-4"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="post">
+                    <div class="title-one title-36 fw-6">Description</div>
+                    <div class="text-2">{{ product.full_description|safe }}</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="flat-vegetables shop">
-<div class="container">
-<div class="row">
-<div class="col-lg-12 col-md-12">
-<div class="title-two title-36 fw-6">Related Products</div>
-<div class="wrap-vegetables">
-<div class="swiper-container carousel-shop" data-aos="fade-up" data-aos-duration="2000">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
-<div class="box box-hv">
-<div class="images hover-style">
-<a href="product-details.html"><img src="{% static 'images/img-box/food-1.png' %}" alt="images"></a>
-<div class="icon-list flex">
-<a class="icon-1" href="#"><i class="far fa-search"></i></a>
-<a class="icon-2" href="#"><i class="fas fa-shopping-basket"></i></a>
-<a class="icon-3" href="#"><i class="far fa-heart"></i></a>
-</div>
-<div class="tag-text"> -20% </div>
-</div>
-<div class="content">
-<div class="star">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg> 
-</div>
-<h3 class="link-style-6"><a href="product-details.html">Chiken Egg</a> </h3>
-<div class="money">
-<span class="one">$15</span> <span class="two">$10</span>
-</div>
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="box box-hv">
-<div class="images hover-style">
-<a href="product-details.html"><img src="{% static 'images/img-box/food-13.png' %}" alt="images"></a>
-<div class="icon-list flex">
-<a class="icon-1" href="#"><i class="far fa-search"></i></a>
-<a class="icon-2" href="#"><i class="fas fa-shopping-basket"></i></a>
-<a class="icon-3" href="#"><i class="far fa-heart"></i></a>
-</div>
-<div class="tag-text style"> Sale </div>
-</div>
-<div class="content">
-<div class="star">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-</div>
-<h3 class="link-style-6"><a href="product-details.html">Fresh Carrots</a> </h3>
-<div class="money">
-<span class="two">$10</span>
-</div>
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="box box-hv">
-<div class="images hover-style">
-<a href="product-details.html"><img src="{% static 'images/img-box/food-11.png' %}" alt="images"></a>
-<div class="icon-list flex">
-<a class="icon-1" href="#"><i class="far fa-search"></i></a>
-<a class="icon-2" href="#"><i class="fas fa-shopping-basket"></i></a>
-<a class="icon-3" href="#"><i class="far fa-heart"></i></a>
-</div>
-<div class="tag-text"> -30% </div>
-</div>
-<div class="content">
-<div class="star">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-</div>
-<h3 class="link-style-6"><a href="product-details.html">Organic Brocolli</a> </h3>
-<div class="money">
-<span class="one">$15</span> <span class="two">$10</span>
-</div>
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="box box-hv">
-<div class="images hover-style">
-<a href="product-details.html"><img src="{% static 'images/img-box/food-12.png' %}" alt="images"></a>
-<div class="icon-list flex">
-<a class="icon-1" href="#"><i class="far fa-search"></i></a>
-<a class="icon-2" href="#"><i class="fas fa-shopping-basket"></i></a>
-<a class="icon-3" href="#"><i class="far fa-heart"></i></a>
-</div>
-<div class="tag-text style"> Fress</div>
-</div>
-<div class="content">
-<div class="star">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-</div>
-<h3 class="link-style-6"><a href="product-details.html">Fresh Gooseberry</a> </h3>
-<div class="money">
-<span class="one">$150</span> <span class="two">$100</span>
-</div>
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="box box-hv">
-<div class="images hover-style">
-<a href="product-details.html"><img src="{% static 'images/img-box/food-1.png' %}" alt="images"></a>
-<div class="icon-list flex">
-<a class="icon-1" href="#"><i class="far fa-search"></i></a>
-<a class="icon-2" href="#"><i class="fas fa-shopping-basket"></i></a>
-<a class="icon-3" href="#"><i class="far fa-heart"></i></a>
-</div>
-<div class="tag-text"> -20% </div>
-</div>
-<div class="content">
-<div class="star">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g> <g> <polygon points="512,197.816 325.961,185.585 255.898,9.569 185.835,185.585 0,197.816 142.534,318.842 95.762,502.431 			255.898,401.21 416.035,502.431 369.263,318.842 		" /> </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-</div>
-<h3 class="link-style-6"><a href="product-details.html">Chiken Egg</a> </h3>
-<div class="money">
-<span class="one">$15</span> <span class="two">$10</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="button-custom-slider">
-<div class="swiper-button-next button-slide-custom-next"> </div>
-<div class="swiper-button-prev button-slide-custom-prev"> </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="title-two title-36 fw-6">Related Products</div>
+                <div class="wrap-vegetables">
+                    <div class="swiper-container carousel-shop"
+                         data-aos="fade-up" data-aos-duration="2000">
+                        <div class="swiper-button-next button-slide-custom-next"></div>
+                        <div class="swiper-button-prev button-slide-custom-prev"></div>
+                        <div class="swiper-wrapper">
+                            {% for product in related_products %}
+                            <div class="swiper-slide">
+                                <div class="box box-hv">
+                                    <div class="images hover-style">
+                                        <a href="{% url 'product' product.slug %}"><img
+                                                src="{{ product.images.first.image.url }}"
+                                                alt="images"></a>
+                                        <div class="icon-list flex">
+                                            <a class="icon-1" href="#"><i
+                                                    class="far fa-search"></i></a>
+                                            <a class="icon-2" href="#"><i
+                                                    class="fas fa-shopping-basket"></i></a>
+                                        </div>
+                                        <div class="tag-text">-{% discount_rate product.old_price product.price %}%</div>
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="link-style-6"><a
+                                                href="{% url 'product' product.slug %}">{{ product.title }}</a></h3>
+                                        <div class="money">
+                                            <span class="one">UAH {{ product.old_price }}</span> <span
+                                                class="two">UAH {{ product.price }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        <div class="button-custom-slider">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="flat-brand">
-<div class="container ">
-<div class="row">
-<div class="col-lg-12 col-md-12">
-<div class="brand-slider">
-<div class="swiper-container carousel-3">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
-<div class="slogan-logo">
-<a href="#">
-<img src="{% static 'images/icon/brand-1.jpg' %}" alt="images">
- </a>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="slogan-logo active">
-<a href="#">
-<img src="{% static 'images/icon/brand-2.jpg' %}" alt="images">
-</a>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="slogan-logo">
-<a href="#">
-<img src="{% static 'images/icon/brand-1.jpg' %}" alt="images">
-</a>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="slogan-logo">
-<a href="#">
-<img src="{% static 'images/icon/brand-2.jpg' %}" alt="images">
-</a>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="slogan-logo">
-<a href="#">
-<img src="{% static 'images/icon/brand-2.jpg' %}" alt="images">
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="flat-subscribe">
-<div class="container">
-<div class="row">
-<div class="col-lg-6 col-md-12">
-<div class="heading-section">
-<h5 class="text-color-1">Subsrribe Here</h5>
-<h2 class="text-color-1">Subscribe To Newsletter</h2>
-<h4 class="fw-4 text-color-1">Duis aute irure dolor in reprehenderit in voluptate velit dolore eu fugiat nulla pariatur.</h4>
-</div>
-</div>
-<div class="col-lg-6 col-md-12">
-<div class="widget-subcribe">
-<div class="form-subcribe">
-<form id="subscribe-form" action="#" method="GET" accept-charset="utf-8" class="form-submit flex">
-<input name="email" value="" class="email" type="email" placeholder="Email Address" required>
-<button id="submit" name="submit" type="submit">
-<span>Subsrcribe Now</span>
-</button>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<footer id="footer" class="clearfix page">
-<div class="container">
-<div class="row">
-<div class="col-lg-4 col-md-12 col-12">
-<div class="widget widget-logo">
-<div class="flat-box">
- <div class="logo-footer style" id="logo-footer">
-<a href="index.html">
-<img id="logo_footer" src="{% static 'images/logo/logo-footer.png' %}" alt="img" width="169" height="42">
-</a>
-</div>
-<p class="sub-widget-logo lh-28">There are many variations of Lorem Ipsum available, but the majority have suffered alteration in some form, </p>
-<h6 class="">Address: <span class="fw-4">4710-4890 Breckinridge USA </span> </h6>
-<h6 class="link-style-4">Email: <a href="info:comapny@hasthemes.com " class="fw-4"><span class="__cf_email__" data-cfemail="f1929e9c90819f88b19990828599949c9482df929e9c">[email&#160;protected]</span> </a> </h6>
-<h6 class="link-style-4">Call us: <a href="tel:012345678" class="fw-4">(08) 22 455 789</a> </h6>
-</div>
-</div>
-</div>
-<div class="col-lg-2 col-md-3 col-6">
-<div class="widget widget-menu style-2 ">
-<div class="title-widget fw-6">Quick Links</div>
-<ul class="box-menu link-style-4">
-<li><a href="about.html">About Us</a></li>
-<li><a href="project-details.html">Project Details</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="blog.html">Our Blog</a></li>
-<li><a href="projects.html">Our Project</a></li>
-<li><a href="product-details.html">Best Products</a></li>
-</ul>
-</div>
-</div>
-<div class="col-lg-2 col-md-3 col-6">
-<div class="widget widget-menu style-3 ">
-<ul class="box-menu link-style-4">
-<li><a href="shop-grid.html"> Shop Grid</a></li>
-<li><a href="team.html">Our Team</a></li>
-<li><a href="blog-category.html">Latest News</a></li>
-<li><a href="contact.html">Contact Us</a></li>
-<li><a href="faq.html">Our FAQ</a></li>
-<li><a href="contact.html">Blog Details</a></li>
-</ul>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 col-12">
-<div class="widget widget-menu style-4">
-<div class="title-widget fw-6">Recent Post</div>
-<ul class="recent-news ">
-<li class="hover-img flex">
-<div class="thumb img-style ">
-<a href="blog-details.html"><img class="img" src="{% static 'images/blog/pots-1.jpg' %}" alt="images"></a>
-</div>
-<div class="content link-style-3">
-<h5 class="fw-6"><a href="blog-details.html">Unicode UTF8 Character Sets They Sltimate Guide Systems</a></h5>
-<h6 class="days fw-4">10 June, 2022</h6>
-</div>
-</li>
-<li class="hover-img flex">
-<div class="thumb img-style ">
-<a href="blog-details.html"><img class="img" src="{% static 'images/blog/pots-2.jpg' %}" alt="images"></a>
-</div>
-<div class="content link-style-3">
-<h5 class="fw-6"><a href="blog-details.html">Unicode UTF8 Character Sets They Sltimate Guide Systems</a></h5>
-<h6 class="days fw-4">10 June, 2022</h6>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="scroll-top" class="go-top"><h5 class="text-color-3"><a class=""></a> Go To Top</h5> </div>
-</footer>
-<div class="widget-social-footer">
-<div class="container">
-<div class="row">
-<div class="col-lg-6 col-md-12 col-sm-12">
-<h5 class="title-bottom fw-4"> Copyright © 2022 <a href="https://themeforest.net/user/themesflat/portfolio" class="text-color-3">Themesflat</a>. All Rights Reserved. </h5>
-</div>
-<div class="col-lg-6 col-md-12 col-sm-12">
-<div class="icon-bottom text-color-1">
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-twitter"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-pinterest-p"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-
-<div class="img-svg">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-<defs>
-<filter id="goo">
-<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-<feColorMatrix in="blur" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-<feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-</filter>
-</defs>
-</svg>
-</div>
-</div>
-
-
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'js/jquery.min.js' %}"></script>
-<script src="{% static 'js/jquery.easing.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/swiper-bundle.min.js' %}"></script>
-<script src="{% static 'js/swiper.js' %}"></script>
-<script src="{% static 'js/jquery-validate.js' %}"></script>
-<script src="{% static 'js/plugin.js' %}"></script>
-<script src="{% static 'js/shortcodes.js' %}"></script>
-<script src="{% static 'js/main.js' %}"></script>
-</body>
-</html>
+{% endblock main %}
